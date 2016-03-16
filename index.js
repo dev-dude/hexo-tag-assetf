@@ -11,6 +11,8 @@ hexo.extend.tag.register('img_p', function(args){
     var imgAttr = args[2] || "{}";
     var slug = args[0] || "";
 
+    var PostAsset = ctx.model('PostAsset');
+
     var asset = PostAsset.findOne({post: this._id, slug: slug});
 
     classes = classes.split(',');
