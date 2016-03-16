@@ -17,9 +17,9 @@ hexo.extend.tag.register('img_p', function(args){
 
     classes = classes.split(',');
     classes = classes.join(' ');
-
+    console.log(asset);
     if (type === 'video') {
-        template = '<video width="500" height="500" controls><source src="' + url.resolve(hexo.config.root, asset.path + "/videos/") + '" type="video/mp4"></video>';
+        template = '<video width="500" height="500" controls><source src="' + url.resolve(hexo.config.root, asset.path) + '" type="video/mp4"></video>';
     }
     return template;
 });
