@@ -1,11 +1,11 @@
 {
-  "name": "hexo-tag-imgassetf",
+  "name": "hexo-tag-imgp",
   "version": "0.1.1",
   "description": "Inserts an image tag using a github content distribution.",
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dev-dude/hexo-tag-githubimage.git"
+    "url": "https://github.com/dev-dude/hexo-tag-imgp.git"
   },
   "keywords": [
     "website",
@@ -16,7 +16,7 @@
     "github"
   ],
   "author": {
-    "name": "Icer, Liang",
+    "name": "David Bailey",
     "email": "liangshuangde@163.com",
     "url": "http://icerdesign.com/"
   },
@@ -27,6 +27,6 @@
   "dependencies": {},
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/wizicer/hexo-tag-githubimage/issues"
+    "url": "https://github.com/dev-dude/hexo-tag-imgp/issues"
   }
 }

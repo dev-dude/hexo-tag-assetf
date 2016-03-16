@@ -4,9 +4,9 @@ var url = require('url');
  * Github image tag
  *
  * Syntax:
- *   {% asset_img slug [title]%}
+ *   {% img_p slug [title]%}
  */
-hexo.extend.tag.register('img_assetf', function(args){
+hexo.extend.tag.register('img_p', function(args){
     var classes = args[1] || "";
     var imgAttr = args[2] || "{}";
     var slug = args[0] || "";
