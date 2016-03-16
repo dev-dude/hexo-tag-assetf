@@ -5,4 +5,4 @@
 
 #Example:
 
-'{% img_p '+imageAssetList[i]+' center {"width":450,"height":450,"alt":"'+imageAssetList[i]+'"} %}');
+'{% img_p '+imageAssetList[i]+' center-class width:300px;height:300px %}');

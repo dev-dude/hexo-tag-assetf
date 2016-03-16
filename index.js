@@ -8,7 +8,7 @@ var url = require('url');
  */
 hexo.extend.tag.register('img_p', function(args){
     var classes = args[1] || "";
-    var imgAttr = args[2] || "{}";
+    var styles = args[2] || "{}";
     var slug = args[0] || "";
 
     //console.log(hexo);
@@ -18,9 +18,8 @@ hexo.extend.tag.register('img_p', function(args){
     var asset = PostAsset.findOne({post: this._id, slug: slug});
 
     classes = classes.split(',');
-    imgAttr = JSON.parse(imgAttr);
-    imgAttr.class = classes.join(' ');
+    classes = classes.join(' ');
 
-    return '<img src="' + url.resolve(hexo.config.root, asset.path) + '" class="' + imgAttr.class + '">';
+    return '<img src="' + url.resolve(hexo.config.root, asset.path) + '" class="' + classes + '" style="' + styles + '">';
 
 });
