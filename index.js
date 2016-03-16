@@ -6,7 +6,7 @@ var url = require('url');
  * Syntax:
  *   {% asset_img slug [title]%}
  */
-hexo.extend.tag.register('img_asset', function(args){
+hexo.extend.tag.register('img_assetf', function(args){
     var classes = args[1] || "";
     var imgAttr = args[2] || "{}";
     var slug = args[0] || "";

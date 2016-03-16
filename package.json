@@ -1,11 +1,11 @@
 {
-  "name": "hexo-tag-githubimage",
+  "name": "hexo-tag-imgassetf",
   "version": "0.1.1",
   "description": "Inserts an image tag using a github content distribution.",
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wizicer/hexo-tag-githubimage.git"
+    "url": "https://github.com/dev-dude/hexo-tag-githubimage.git"
   },
   "keywords": [
     "website",
