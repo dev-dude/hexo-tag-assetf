@@ -19,8 +19,6 @@ hexo.extend.tag.register('img_p', function(args){
 
     classes = classes.split(',');
     imgAttr = JSON.parse(imgAttr);
-
-    imgAttr.src   = githubResourceUrl + imageId;
     imgAttr.class = classes.join(' ');
 
     return '<img src="' + url.resolve(hexo.config.root, asset.path) + '" class="' + imgAttr.class + '">';
