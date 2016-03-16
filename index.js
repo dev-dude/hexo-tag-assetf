@@ -1,15 +1,17 @@
-var githubResourceUrl = "https://raw.githubusercontent.com";
+var url = require('url');
 
 /**
  * Github image tag
  *
  * Syntax:
- *   {% ghimg /githubusername/repositoryname/branchname/path/to/image [class1,class2,classN] [JSONImageAttributes] %}
+ *   {% asset_img slug [title]%}
  */
-hexo.extend.tag.register('ghimg', function(args){
-    var imageId = args[0];
+hexo.extend.tag.register('img_asset', function(args){
     var classes = args[1] || "";
     var imgAttr = args[2] || "{}";
+    var slug = args[0] || "";
+
+    var asset = PostAsset.findOne({post: this._id, slug: slug});
 
     classes = classes.split(',');
     imgAttr = JSON.parse(imgAttr);
@@ -17,5 +19,6 @@ hexo.extend.tag.register('ghimg', function(args){
     imgAttr.src   = githubResourceUrl + imageId;
     imgAttr.class = classes.join(' ');
 
-    return "<img src='" + imgAttr.src + "' class='" + imgAttr.class + "' />";
+    return '<img src="' + url.resolve(ctx.config.root, asset.path) + '" class="' + imgAttr.class + '">';
+
 });
