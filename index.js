@@ -11,7 +11,7 @@ hexo.extend.tag.register('img_p', function(args){
     var imgAttr = args[2] || "{}";
     var slug = args[0] || "";
 
-    console.log(hexo);
+    //console.log(hexo);
 
     var PostAsset = hexo.model('PostAsset');
 
