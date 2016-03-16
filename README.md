@@ -1,6 +1,6 @@
 ## Intro
 
-{% img_p slug [class] [styles, alt] %}
+{% img_p [type (video|img) ] slug [class] [styles] %}
 
 
 #Example:
